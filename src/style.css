@@ -445,11 +445,35 @@ img {
 
 /*Mobile*/
 @media (max-width: 500px) {
-  nav .flex {
+  nav.flex {
     flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .header {
+    height: 100px;
   }
 
   nav ul {
     padding: 10px;
+  }
+  .main {
+    height: auto;
+  }
+  .main .featured-content .btn {
+    margin-bottom: 30px;
+  }
+
+  .technologies {
+    height: 500px;
+  }
+
+  .technologies ul {
+    justify-content: center;
+  }
+
+  .tech {
+    padding: 0;
+    margin: 0;
   }
 }
