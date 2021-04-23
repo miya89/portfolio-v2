@@ -9,6 +9,10 @@
   --light-color: #f3f3f3;
   --contrast-color: #dba539;
 }
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
 
 body {
   font-family: monospace;
@@ -72,6 +76,9 @@ p {
   margin-top: 10px;
 }
 
+.btn:hover {
+  transform: scale(0.98);
+}
 img {
   width: 100px;
 }
@@ -111,6 +118,12 @@ nav a:hover {
   position: relative;
 }
 
+.main .featured-content {
+  animation: slideInFromRight 1s ease-in;
+}
+.main .featured-image {
+  animation: slideInFromTop 1s ease-in;
+}
 img {
   width: 380px;
   border: 6px solid var(--light-color);
@@ -172,6 +185,11 @@ img {
 .technologies li {
   padding: 20px;
   text-align: center;
+  transition: 0.2sec ease-in-out;
+}
+
+.technologies li:hover {
+  transform: translateY(-15px);
 }
 
 .technologies h2 {
@@ -184,9 +202,35 @@ img {
 }
 
 /*Contact page*/
-.contact .main {
+
+.contact-main {
+  height: 500px;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.contact-main::before,
+.contact-main::after {
+  content: "";
+  align-content: center;
+  position: absolute;
+  background: white;
+  height: 80px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  transform: skewY(-2deg);
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+}
+.contact-main {
   overflow: visible;
 }
+.contact-main p {
+  color: var(--light-color);
+}
+
 .contact-form {
   position: relative;
   top: 69px;
@@ -194,6 +238,10 @@ img {
   width: 400px;
   z-index: 100;
   justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
+}
+.contact-text {
+  animation: slideInFromTop 1s ease-in;
 }
 .contact-form .form-control {
   margin: 30px 0;
@@ -218,7 +266,7 @@ img {
   padding: 40px;
   margin: 10px;
 }
-.contact {
+.contact-main {
   margin-bottom: 100px;
 }
 
@@ -265,4 +313,143 @@ img {
 
 .footer a {
   color: var(--contrast-color);
+}
+
+/*Animation*/
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*Tablets*/
+@media (max-width: 768px) {
+  .grid,
+  .main.grid {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .main {
+    height: 700px;
+  }
+
+  .main h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .main p {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+  }
+  .main .featured-image {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .main img {
+    width: 280px;
+  }
+  .main .featured-content {
+    line-height: 1.3;
+  }
+
+  .main .featured-content .btn {
+    display: block;
+  }
+  .featured-content {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .contact-form {
+    justify-self: center;
+    margin: auto;
+  }
+  .contact-main h2 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .contact-main p {
+    text-align: center;
+  }
+  .contact-form {
+    position: relative;
+    top: -20px;
+  }
+
+  .contact-main::before,
+  .contact-main::after {
+    height: 90px;
+    bottom: -50px;
+  }
+
+  .main::before,
+  .main::after {
+    display: none;
+  }
+  .projects h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .projects p {
+    text-align: center;
+    font-weight: lighter;
+  }
+  .projects .project-text .btn {
+    margin: auto;
+    display: block;
+    margin: 10px;
+  }
+  .technologies ul {
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .technologies {
+    height: 450px;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 500px) {
+  nav .flex {
+    flex-direction: column;
+  }
+
+  nav ul {
+    padding: 10px;
+  }
 }
