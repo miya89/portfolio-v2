@@ -45,6 +45,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #f3f3f3;
 }
 
 h1,
@@ -63,10 +64,12 @@ p {
   padding: 10px 30px;
   cursor: pointer;
   background-color: var(--contrast-color);
-  color: var(--primary-color);
+  color: var(--light-color);
   text-align: center;
+  font-weight: 400;
   border: none;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 img {
@@ -114,12 +117,13 @@ img {
   border-radius: 10px;
 }
 .main h1 {
-  font-size: 55px;
+  font-size: 40px;
   color: var(--light-color);
 }
 
 .main p {
   margin: 20px 0;
+  color: var(--light-color);
 }
 
 .main::before,
@@ -179,6 +183,23 @@ img {
   padding: 10px;
 }
 
+/*Projects*/
+.projects {
+  padding-top: 30px;
+}
+.projects p.intro {
+  text-align: center;
+  font-size: 20px;
+}
+
+.intro {
+  margin-bottom: 40px;
+}
+
+.project-img {
+  margin: auto;
+}
+
 /*Footer*/
 .footer {
   height: 150px;
@@ -189,11 +210,17 @@ img {
 }
 
 .social {
-  padding: 10px;
-  margin-top: 20px;
+  padding: 0 5px;
+  margin-top: 50px;
 }
 
 .footer p {
   text-align: center;
   font-size: 12px;
+
+  margin: 0;
+}
+
+.footer .fab {
+  font-size: 30px;
 }
