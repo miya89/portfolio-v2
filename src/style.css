@@ -110,6 +110,50 @@ nav a:hover {
   border-bottom: 1px solid Var(--light-color);
 }
 
+.label {
+  background-color: var(--secondary-color);
+  width: 50px;
+  height: 26px;
+  padding: 5px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox:checked + .label {
+  background-color: var(--contrast-color);
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.ball {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+.main .contrast {
+  background-color: var(--contrast-color);
+}
+.main .btn .secondary {
+  background-color: var(--secondary-color);
+}
+
+.contact-main .contrast {
+  background-color: var(--contrast-color);
+}
 /*Main*/
 
 .main {
@@ -118,6 +162,12 @@ nav a:hover {
   position: relative;
 }
 
+.contrast {
+  background-color: var(--contrast-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
 .main .featured-content {
   animation: slideInFromRight 1s ease-in;
 }
@@ -468,12 +518,25 @@ img {
     height: 500px;
   }
 
+  .technologies h2 {
+    padding-top: 40px;
+    margin-top: 30px;
+  }
   .technologies ul {
     justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 
   .tech {
     padding: 0;
     margin: 0;
+  }
+  .projects p {
+    font-size: 15px;
+  }
+
+  .footer p {
+    margin: 0 20px;
   }
 }
