@@ -539,4 +539,7 @@ img {
   .footer p {
     margin: auto;
   }
+  .btn {
+    z-index: 100;
+  }
 }
