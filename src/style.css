@@ -74,6 +74,7 @@ p {
   border: none;
   border-radius: 5px;
   margin-top: 10px;
+  -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -536,12 +537,11 @@ img {
     font-size: 15px;
   }
 
+  .btn {
+    margin-top: 10px;
+    z-index: 100;
+  }
   .footer p {
     margin: auto;
-  }
-  btn {
-    display: inline-block;
-    padding: 10px 30px;
-    z-index: 100;
   }
 }
