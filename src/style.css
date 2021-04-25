@@ -151,9 +151,6 @@ nav a:hover {
   background-color: var(--secondary-color);
 }
 
-.contact-main .contrast {
-  background-color: var(--contrast-color);
-}
 /*Main*/
 
 .main {
@@ -291,7 +288,7 @@ img {
   animation: slideInFromRight 1s ease-in;
 }
 .contact-text {
-  animation: slideInFromTop 1s ease-in;
+  animation: slideInFromLeft 1s ease-in;
 }
 .contact-form .form-control {
   margin: 30px 0;
@@ -447,6 +444,12 @@ img {
   .contact-form {
     justify-self: center;
     margin: auto;
+    position: relative;
+    top: -20px;
+  }
+
+  .contact-form.card {
+    height: 400px;
   }
   .contact-main h2 {
     text-align: center;
@@ -454,10 +457,6 @@ img {
   }
   .contact-main p {
     text-align: center;
-  }
-  .contact-form {
-    position: relative;
-    top: -20px;
   }
 
   .contact-main::before,
@@ -487,6 +486,7 @@ img {
   .technologies ul {
     flex-wrap: wrap;
     font-size: 12px;
+    margin: auto;
   }
   .technologies {
     height: 450px;
@@ -515,7 +515,7 @@ img {
   }
 
   .technologies {
-    height: 500px;
+    height: 450px;
   }
 
   .technologies h2 {
@@ -523,9 +523,9 @@ img {
     margin-top: 30px;
   }
   .technologies ul {
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin: auto;
   }
 
   .tech {
@@ -537,6 +537,6 @@ img {
   }
 
   .footer p {
-    margin: 0 20px;
+    margin: auto;
   }
 }
